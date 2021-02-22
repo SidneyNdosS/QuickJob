@@ -1,0 +1,67 @@
+.thumbnails{
+    max-width:370px;
+}
+.required_star{
+    color: red;
+}
+.error{
+    color: red;
+    float: left;
+    width: 100%;
+}
+.apply-now input,
+.apply-now select,
+.apply-now textarea{
+    width:100%;
+}
+.my_pair{
+    padding-bottom: 1.68em;
+}
+.bg{
+    background: url(images/banner-freepik.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4em;
+    font-weight: bold;
+    text-shadow: -1px 1px 15px #000, -2px 0 #000, 0 1px 5px #000, 2px 0 #000, 0 -2px 5px #000;
+    margin-bottom: 1em;
+}
+#frm-searchForm{ 
+    max-height:36px
+}
+#frm-searchForm .my_label:first-child{
+    display: none;
+}
+#frm-searchForm .my_pair:last-of-type{
+    position: relative;
+    top:-61px;
+    left:194px
+}
+#flashes{
+    padding: 0;    
+}
+#flashes li{
+    list-style:none;
+}
+.nittro-flash-error{
+   color: #721c24;
+   background-color: #f8d7da !important;
+   border-color: #f5c6cb;
+}
+.nittro-flash-success {
+   color: #155724;
+   background-color: #d4edda;
+   border-color: #c3e6cb;
+}
+.breadcrumb {
+   border-bottom: 1px solid rgba(0,0,0,.09);
+   padding: 0.2em;
+}
+.breadcrumb span:last-child{
+    color: grey;
+    font-style: italic;
+}
+
+
+

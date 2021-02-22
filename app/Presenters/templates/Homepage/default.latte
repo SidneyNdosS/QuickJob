@@ -1,0 +1,55 @@
+{block content}
+
+<div class="row mt-3 mb-2">
+    <div class="col-6">
+        {control searchForm}
+    </div>
+    <span class="col-6 text-end">{$opportunities_found}&nbsp;{$opportunities_found_text}</span>
+</div>
+
+<div n:foreach="$job_positions as $job_position" class="row g-0 bg-white rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">{$job_position['category_name']}</strong>
+        <h3 class="mb-0">{$job_position['title']}</h3>
+        <div class="mb-1 text-muted">{$job_position['cities']}</div>
+        <p class="card-text mb-auto">
+            {$job_position['content']}
+            <a n:href="Position:show $job_position['slug'], page: $page, search: $search" class="stretched-link" data-ajax="false">Keep reading</a>
+        </p>                
+
+        <ul class="list-group list-group-horizontal-sm mt-3">
+            <li class="list-group-item" n:foreach="$job_position['tags'] as $tag">{$tag}</li>
+        </ul>
+    </div>
+
+    <div class="thumbnails d-none d-md-block">
+        <img src="storage/positions/{$job_position['img_src']}" alt="{$job_position['img_alt']}" class="img-fluid">
+    </div>
+</div>
+
+
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {if $page > 1}
+            <li class="page-item">
+                <a n:href="default, 1" data-ajax="false" class="page-link">First</a>
+            </li>
+            <li class="page-item">
+                <a n:href="default, $page - 1" data-ajax="false" class="page-link">Previous</a>
+            </li>
+        {/if}
+
+        <li class="page-item" n:if="$lastPage > 1"><span class="page-link">Page {$page} of {$lastPage}</span></li>
+
+        {if $page < $lastPage}
+            <li class="page-item"> 
+                 <a n:href="default, $page + 1" data-ajax="false" class="page-link">Next</a> 
+            </li>		
+
+            <li class="page-item">
+                <a n:href="default, $lastPage" data-ajax="false" class="page-link">Last</a>
+            </li>
+        {/if}
+    </ul>
+</nav>    

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <!--Allows the user to resize the screen on verials devices and make it compatible with IOS-->
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+            <meta name="robots" content="index,follow,noodp" />
+
+            <meta name="author" content="Luan Sidney" />
+            <meta name="description" content="Find opportunities to guarantee your independence, towards a better life" />
+            <meta name="keywords" content="job, employment, job opportunity, opportunities, open positions" />
+
+            <title>{ifset title}{include title|stripHtml} | {/ifset}EnsuredSpot</title>
+
+            <link rel="stylesheet" type="text/css" href="/QuickJob/www/libraries/nittro/nittro.min.css" />
+            <script type="application/javascript" src="/QuickJob/www/libraries/nittro/nittro.min.js" async defer></script>
+
+            <!-- Import Bootstrap-5.0.0-beta2-dist -->
+            <link rel="stylesheet" type="text/css" href="/QuickJob/www/libraries/bootstrap/css/bootstrap.min.css" />
+            <!-- <script src="/QuickJob/www/libraries/bootstrap/js/bootstrap.min.js"></script>-->
+
+            <!-- Custom styles for this template -->
+            <link rel="stylesheet" type="text/css" href="/QuickJob/www/assets/css/style.css" />
+    </head>
+
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" aria-current="page" href="/QuickJob/www" data-ajax="false">QuickJob</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/QuickJob/www/aboutus" data-ajax="false"> About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="jumbotron bg text-white">
+            <div class="container py-5 text-center">
+                <h1>Find the best for you!!!</h1>
+                <p class="lead">Find opportunities to guarantee your independence, towards a better life.</p>
+            </div>
+        </div>
+
+        <main class="container">
+            <!-- data-flash-classes="alert-success"-->
+            <div n:flashes ></div>
+            
+            {include content}
+        </main>    
+
+        <footer class="container my-md-5 pt-md-3 border-top">
+            <p class="float-end">
+                <a href="#">Back to top</a>
+            </p>
+            
+            <p>
+                &copy; 2021 Developed by Luan Sidney
+            </p>
+        </footer>
+        <script src="/QuickJob/www/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        {block scripts}
+
+        {/block}
+    </body>
+</html>
